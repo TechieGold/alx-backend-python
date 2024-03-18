@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Module for asynchronous routine that spawns wait_random n times
+Module for asynchronous coroutine that spawns wait_random n times
 Args:
     n(int): Number of times to spawn wait_random.
     max_delay(int): Maximum delay in seconds.
