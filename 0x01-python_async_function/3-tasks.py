@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Module that creates an asyncio.Task for wait_random with the given max_delay.
 Args:
