@@ -5,6 +5,8 @@ from typing import Dict
 from unittest.mock import MagicMock, Mock, patch
 from parameterized import parameterized, parameterized_class
 from client import GithubOrgClient
+
+
 class TestGithubOrgClient(unittest.TestCase):
     """ Tests the `GithubOrgClient` class """
     @parameterized.expand([
@@ -14,7 +16,6 @@ class TestGithubOrgClient(unittest.TestCase):
     @patch(
         "client.get_json"
     )
-
     def test_org(self, org: str, resp: Dict, mocked_fxn: MagicMock) -> None:
         """ Tests the `org` method. """
         mocked_fxn.return_value = MagicMock(return_value=resp)
