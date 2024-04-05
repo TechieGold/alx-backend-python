@@ -37,10 +37,11 @@ class TestAccessNestedMap(unittest.TestCase):
             nested_map: Dict,
             path: Tuple[str],
             exception: Exception,
-            ) -> None:
+    ) -> None:
         """Tests `access_nested_map`'s exception raising."""
         with self.assertRaises(exception):
             access_nested_map(nested_map, path)
+
 
 class TestGetJson(unittest.TestCase):
     """ Test the `get_json` function"""
@@ -48,7 +49,6 @@ class TestGetJson(unittest.TestCase):
         ("http://example.com", {"payload": True}),
         ("http://holberton.io", {"payload": False}),
     ])
-
     def test_get_json(self, test_url: str, test_payload: Dict) -> None:
         """Test `get_json's` output """
         attrs = {'json.return_value': test_payload}
